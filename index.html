@@ -55,23 +55,36 @@
         <article class="form">
             <h3>Contact us</h3>
 
-            <form class="article__form" method="post" action="#">
-                <div class="form__div1">
-                    <input class="form__firstname" name="FisrtName" type="text" placeholder="Firstname" >
-
-                    <input class="form__lastname" name="LastName" type="text" placeholder="Lastname">
+            <form id="form" class="article__form" method="post" action="#">
+                <div class="name">
+                    <div class="form__firstname">
+                        <input class="firstname" id="firstName" name="firstName" type="text" placeholder="Firstname">
+                        <label data-error="false" class="error_message" id="firstnameError" for="firstName">Veuillez saisir votre prénom</label>
+                    </div>
+                    
+                    <div class="form__lastname">
+                        <input class="lastname" id="lastName" name="lastName" type="text" placeholder="Lastname">
+                        <label data-error="false" class="error_message" for="lastName" id="lastnameError">Veuillez saisir votre nom</label>
+                    </div>
                 </div>
-                
-                <div class="form__div2">
-                    <input class="form__email" name="EmailAddress" type="text" placeholder="Email address">
 
-                    <input class="form__phone" name="PhoneNumber" type="tel" placeholder="Phone number">
+                <div class="coordonnees">
+                    <div class="form__email">
+                        <input class="email" id="email" name="email" type="text" placeholder="Email address">
+                        <label data-error="false" class="error_message" for="email" id="emailError">Veuillez saisir une adresse e-mail valide</label>
+                    </div>
+                    
+                    <div class="form__phone">
+                        <input class="phone" id="phone" name="phone" type="tel" placeholder="Phone number">
+                        <label data-error="false" class="error_message" for="phone" id="phoneError">Veuillez saisir un numéro valide</label>
+                    </div>
                 </div>
-
-                <div class="form__div3">
-                    <textarea placeholder="Tape your text"></textarea>
-
-                    <input class="form__submit" type="submit" value="Submit">
+                    
+                <div class="form__message">
+                    <textarea class="message" id="message" name="message" placeholder="Tape your text"></textarea>
+                    <label data-error="false" class="error_message" for="message" id="messageError">Votre message doit contenir au minimul 10 caractères</label>
+                    
+                    <button class="form__submit" id="submit" type="submit" value="submit">Submit</button>
                 </div>
             </form>
         </article>
@@ -89,6 +102,10 @@
             <p>My website 2022 - All rights reserved</p>
         </div>
     </footer>
+
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </body>
 
 </html>

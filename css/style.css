@@ -114,23 +114,36 @@ body {
 .article__form {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.form__div1 {
+.name {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
   padding: 10px 10px;
 }
-
-.form__div2 {
+.name .form__firstname, .name .form__lastname {
   display: flex;
-  justify-self: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.coordonnees {
+  display: flex;
+  justify-content: space-between;
   gap: 10px;
   padding: 10px 10px;
 }
+.coordonnees .form__email, .coordonnees .form__phone {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-.form__div3 {
+.form__message {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,6 +167,16 @@ textarea {
 
 .form__submit:hover {
   cursor: pointer;
+}
+
+.error_message {
+  font-size: 10pt;
+  font-style: italic;
+  color: red;
+}
+
+label[data-error=false] {
+  display: none;
 }
 
 @media (min-width: 740px) {

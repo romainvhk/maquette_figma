@@ -40,23 +40,38 @@
 .article__form {
     box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.5);
     padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.form__div1 {
+.name {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
     padding: 10px 10px;
+
+    .form__firstname, .form__lastname {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
-.form__div2 {
+.coordonnees {
     display: flex;
-    justify-self: center;
+    justify-content: space-between;
     gap: 10px;
     padding: 10px 10px;
+
+    .form__email, .form__phone {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
-.form__div3 {
+.form__message {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,6 +97,16 @@ textarea {
     cursor: pointer;
 }
 
+.error_message {
+    font-size: 10pt;
+    font-style: italic;
+    color: red;
+}
+
+label[data-error=false] {
+    display : none;
+}
+
 @media (min-width: 740px) {
     .main__article {
         flex-direction: row;
@@ -101,6 +126,7 @@ textarea {
     padding: 20px;
    }
 }
+
 
 @media (min-width: 1400px) {
     .article1, .article2, .article3 {
