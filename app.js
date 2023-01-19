@@ -2,21 +2,6 @@ const form = document.querySelector(".article__form")
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    // const firstname = document.querySelector('.firstname');
-    // const lastname = document.querySelector('.lastname');
-    // const email = document.querySelector('.email');
-    // const phone = document.querySelector('.phone');
-    // const message = document.querySelector('.message');
-
-    // const formData = {
-    //     firstname: firstname.value,
-    //     lastname: lastname.value,
-    //     email: email.value,
-    //     phone: phone.value,
-    //     message: message.value,
-    // }
-
     
     const formData = new FormData(form);
     
@@ -64,6 +49,7 @@ form.addEventListener('submit', (event) => {
             }).catch((error) => {
                 console.log(error)
             });
+            form.reset();
     };
     
 });
