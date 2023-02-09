@@ -4,6 +4,40 @@ body {
   text-align: center;
 }
 
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
+.modalContainer .modal {
+  border: 1px solid black;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 30px;
+}
+.modalContainer .modal .bx {
+  font-size: 50pt;
+  color: green;
+}
+.modalContainer .modal .modal__message {
+  font-size: 20pt;
+}
+.modalContainer .modal .modal__button {
+  padding: 10px;
+  border: none;
+  background-color: rgb(0, 4, 255);
+  font-size: 15pt;
+  color: white;
+  cursor: pointer;
+}
+
 .header__nav {
   padding: 0px 20px;
 }

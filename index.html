@@ -9,16 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Maquette Figma</title>
 </head>
-
 <body>
-    <header>
-        <nav class="header__nav">
-            <ul class="nav__list">
-                <li><a href="#"><i class='bx bxs-castle'></i></a></li>
-                <li><a class="list__signup" href="#">Sign Up</a></li>
+        <div class="modalContainer">
+            <div class="modal">
+                <i class='bx bx-check modal__logo'></i>
+                <p class="modal__message">Votre message à bien été envoyé !</p>
+                <button class="modal__button">OK</button>
+            </div>
+        </div>      
+        <header>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="#"><i class='bx bxs-castle'></i></a></li>
+                    <li><a class="list__signup" href="#">Sign Up</a></li>
             </ul>
         </nav>
-
+        
         <div class="header__background">
             <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
 
@@ -28,7 +34,7 @@
             </form>
         </div>
     </header>
-
+    
     <main class="main">
         <div class="main__article">
             <article class="article1">
@@ -36,25 +42,25 @@
                 <h2>Lorem, ipsum.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo?</p>
             </article>
-
+            
             <article class="article2">
                 <i class='bx bxs-castle'></i>
                 <h2>Lorem, ipsum.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo?</p>
             </article>
-
+            
             <article class="article3">
                 <i class='bx bxs-castle'></i>
                 <h2>Lorem, ipsum.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo?</p>
             </article>
         </div>
-
+        
         <div class="main__separate"></div>
-
+        
         <article class="form">
             <h3>Contact us</h3>
-
+            
             <form id="form" class="article__form" method="post" action="#">
                 <div class="name">
                     <div class="form__firstname">
@@ -67,7 +73,7 @@
                         <label data-error="false" class="error_message" for="lastName" id="lastnameError">Veuillez saisir votre nom</label>
                     </div>
                 </div>
-
+                
                 <div class="coordonnees">
                     <div class="form__email">
                         <input class="email" id="email" name="email" type="text" placeholder="Email address">
@@ -79,7 +85,7 @@
                         <label data-error="false" class="error_message" for="phone" id="phoneError">Veuillez saisir un numéro valide</label>
                     </div>
                 </div>
-                    
+                
                 <div class="form__message">
                     <textarea class="message" id="message" name="message" placeholder="Tape your text"></textarea>
                     <label data-error="false" class="error_message" for="message" id="messageError">Votre message doit contenir au minimul 10 caractères</label>
@@ -89,7 +95,7 @@
             </form>
         </article>
     </main>
-
+    
     <footer class="footer">
         <div class="footer__link">
             <a href="#">About</a>
@@ -97,15 +103,15 @@
             <a href="#">Term of use</a>
             <a href="#">Privacy Policy</a>
         </div>
-
+        
         <div class="footer__legals">
             <p>My website 2022 - All rights reserved</p>
         </div>
     </footer>
-
+    
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    
 </body>
 
 </html>

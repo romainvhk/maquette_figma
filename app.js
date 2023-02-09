@@ -1,4 +1,8 @@
-const form = document.querySelector(".article__form")
+const form = document.querySelector(".article__form");
+const modalContainer = document.querySelector(".modalContainer");
+const modalButton = document.querySelector(".modal__button");
+
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -50,6 +54,13 @@ form.addEventListener('submit', (event) => {
                 console.log(error)
             });
             form.reset();
+
     };
+
+    modalContainer.style.display = "flex";
     
+});
+
+modalButton.addEventListener('click', (event) => {
+    modalContainer.style.display = "none";
 });
