@@ -55,12 +55,12 @@ form.addEventListener('submit', (event) => {
             });
             form.reset();
 
+            modalContainer.style.display = "flex";
     };
 
-    modalContainer.style.display = "flex";
     
 });
 
-modalButton.addEventListener('click', (event) => {
+modalButton.addEventListener('click', () => {
     modalContainer.style.display = "none";
 });
